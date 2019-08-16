@@ -219,7 +219,7 @@
                 
               
 
-              <time title="Created: 2019-08-16 20:54:12 / Modified: 20:55:09" itemprop="dateCreated datePublished" datetime="2019-08-16T20:54:12+08:00">2019-08-16</time>
+              <time title="Created: 2019-08-16 20:54:12 / Modified: 21:38:37" itemprop="dateCreated datePublished" datetime="2019-08-16T20:54:12+08:00">2019-08-16</time>
             </span>
           
             
@@ -239,10 +239,14 @@
 
       
           <h1 id="在Hexo博客中添加图片"><a href="#在Hexo博客中添加图片" class="headerlink" title="在Hexo博客中添加图片"></a>在Hexo博客中添加图片</h1><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>在Hexo博客根目录安装<code>hexo-asset-image</code>插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> npm install hexo-asset-image --save#我信你个鬼,这个版本太老了,用下面的命令</span><br><span class="line">npm install https://github.com/xcodebuild/hexo-asset-image.git</span><br></pre></td></tr></table></figure>
 
 <h2 id="配置自动创建文件夹"><a href="#配置自动创建文件夹" class="headerlink" title="配置自动创建文件夹"></a>配置自动创建文件夹</h2><p>在<code>_config.yml</code>修改<code>post_asset_folder: true</code>以在创建新文章的时候自动创建同名文件夹</p>
-<h2 id="图片效果展示"><a href="#图片效果展示" class="headerlink" title="图片效果展示"></a>图片效果展示</h2><p><img src="/.com//Mercy.jpg" alt></p>
+<h2 id="图片效果展示"><a href="#图片效果展示" class="headerlink" title="图片效果展示"></a>图片效果展示</h2><p><img src="/2019/08/16/Into-Hexo-Blog-Inset-Image/Mercy.jpg" alt="Mercy"></p>
+<h1 id="等等-好像没那么容易结束…"><a href="#等等-好像没那么容易结束…" class="headerlink" title="等等!好像没那么容易结束…"></a>等等!好像没那么容易结束…</h1><p>原本文章在这里就结束了,作者本来只想简单的记录一下设置图片的过程,没想到踩了一个大坑!也许你注意到了,上面的安装<code>hexo-asset-image</code>的代码第一行被注释掉了,作者弄了两个小时,就是无法生成正确的引用图片地址,气死我了,各种升级依赖,各种google,然后发现就是以前的版本有一个生成Bug,导致图片的位置一直引用的地址为</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">src="/.com//xxPic.jpg"</span><br></pre></td></tr></table></figure>
+
+<p>气死我了,希望看到文章的您不要再使用<code>npm install hexo-asset-image --seve</code>了!!</p>
 
         
       
